@@ -1,0 +1,13 @@
+.container-box{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+#btnn{
+    margin-top: 6px;
+}
+

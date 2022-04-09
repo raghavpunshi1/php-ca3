@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container container-box">
+        <div>
+            <h3>Enter Contact Details</h3>
+            <form action="queries/register_user_db.php" method="POST">
+                <input type="text" placeholder="Name.." name="contactname" required>
+                <br>
+                <input type="tel" placeholder="Phone number.." name="phone" required pattern="[0-9]{10}">
+                <br>
+                <input type="text" placeholder="Email..." name="email" required>
+                <br>
+                <input type="submit" value="Register" class="btn btn-outline-primary" id="btnn">
+            </form>
+        </div>
+        <div>
+            <h3>Search Contact Details <br>by NAME</h3>
+            <form action="queries/contact_by_name.php" method="POST">
+                <input type="text" placeholder="Name.." name="contactname" required>
+                <br>
+                <input type="submit" value="Search" class="btn btn-outline-primary" id="btnn">
+            </form><br>
+            <h3>Search Contact Details <br>by PHONE</h3>
+            <form action="queries/contact_by_phone.php" method="POST">
+                <input type="text" placeholder="Phone.." name="phone" required>
+                <br>
+                <input type="submit" value="Search" class="btn btn-outline-primary" id="btnn">
+            </form>
+        </div>
+        <div>
+            <h3>Delete Contact Details <br>by NAME</h3>
+            <form action="queries/delete_by_name.php" method="POST">
+                <input type="text" placeholder="Name.." name="contactname" required>
+                <br>
+                <input type="submit" class="btn btn-outline-primary" value="delete" id="btnn">
+            </form><br>
+            <h3>Delete Contact Details <br>by PHONE</h3>
+            <form action="queries/delete_by_phone.php" method="POST">
+                <input type="text" placeholder="Phone.." name="phone" required>
+                <br>
+                <input type="submit" value="delete" class="btn btn-outline-primary" id="btnn">
+            </form>
+        </div>
+        <div>
+            <form action="queries/contactlist.php">
+                <input type="submit" value="Contact list" class="btn btn-primary" id="btnn">
+            </form>
+        </div>
+        <div>
+            <form action="loggedout.php">
+                <input type="submit" value="Log Out!" class="btn btn-danger" id="btnn">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
